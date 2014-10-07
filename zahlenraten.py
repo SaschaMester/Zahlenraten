@@ -33,7 +33,7 @@ def start(minZahl, maxZahl, versuche):
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   if ausgedachteZahl > 500 and ausgedachteZahl < 1000 and versuche < 20:
     versuche = versuche * 2
-  elif ausgedachteZahl > 1000 and versuche < 30:
+  elif ausgedachteZahl > 2500 and versuche < 30:
     versuche = versuche * 3
   print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
   print("Durch Eingabe von 0 beenden Sie das Programm")
