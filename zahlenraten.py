@@ -1,4 +1,5 @@
-#! /usr/bin/python3
+#! /usr/bin/env python
+# -*- coding: utf-8
 
 # Zufallsfunktion importieren
 from random import randint
@@ -7,7 +8,7 @@ from random import randint
 minZahl = 1 
 # Der Minimalwert für das Zahlenratespiel kann hier geändert werden
 
-maxZahl = 100 
+maxZahl = 100
 # Die Maximalwert für das Zahlenratespiel kann hier geändert werden
 
 versuche = 5
