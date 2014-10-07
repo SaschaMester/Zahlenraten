@@ -33,14 +33,14 @@ def start(minZahl, maxZahl, versuche):
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
   print("Durch Eingabe von 0 beenden Sie das Programm")
-  __raten(ausgedachteZahl, versuche)
+  __raten(ausgedachteZahl, minZahl, maxZahl, versuche)
 
-def __raten(ausgedachteZahl, versuche): 
+def __raten(ausgedachteZahl, minZahl, maxZahl, versuche): 
   # Die Funktion raten() stellt die eigentliche Funktionalität des Programmes zur Verfügung
   for count in range(0, versuche):
     zahl = int(input("Bitte geben Sie nun Ihren {}. Rateversuch ein: " . format(count+1))) 
     if zahl == 0:
-      exit()
+      __ende()
     if zahl != ausgedachteZahl and count != versuche - 1:
       if versuche - count - 1 != 1:
         print("Sie haben noch {} Versuche." . format(versuche - count - 1))
@@ -48,7 +48,7 @@ def __raten(ausgedachteZahl, versuche):
         print("Sie haben noch 1 Versuch.")
     if zahl != ausgedachteZahl and count == versuche - 1:
       print("Sie haben es in {} Versuchen nicht geschafft, die Zahl {} zu erraten." . format(versuche, ausgedachteZahl))
-      exit()
+      __ende()
     if zahl < ausgedachteZahl:
       # Eingegebene Zahl mit der zu ratenden Zahl vergleichen
       print ("Meine Zahl ist größer als {}" . format(zahl))
@@ -58,4 +58,9 @@ def __raten(ausgedachteZahl, versuche):
       # Spiel gewonnen
       print("RICHTIG!")
       print("Sie haben {} Versuche benötigt." . format(count+1))
-      exit()
+      start(minZahl, maxZahl * (count + 1), versuche * 2)
+
+def __ende():
+  print ("Auf Wiedersehen!")
+  exit()
+
