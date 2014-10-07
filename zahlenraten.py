@@ -48,7 +48,8 @@ def raten():
   # Die Funktion raten() stellt die eigentliche Funktionalität des Programmes zur Verfügung
   for count in range(0, versuche):
     zahl = int(input("Bitte geben Sie nun Ihren {}. Rateversuch ein: " . format(count+1))) 
-    # Da der Computer bei 0 zu zählen beginnt, wäre der 1. Rateversuch der "0. Versuch" - also addieren wir 1 
+    if zahl != ausgedachteZahl and count != versuche - 1:
+      print("Sie haben noch {} Versuche" . format(versuche - count - 1))
     if zahl != ausgedachteZahl and count == versuche - 1:
       print("Sie haben es in {} Versuchen nicht geschafft, die Zahl {} zu erraten." . format(versuche, ausgedachteZahl))
       exit()
