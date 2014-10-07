@@ -25,5 +25,14 @@
 
 from zahlenraten import *
 
-start()
+# Die Funktion "start" des Zahlenrate-Moduls erwartet 3 Argumente: 
+# Die kleinstmögliche Zahl, die größtmögliche Zahl und die Anzahl der
+# Versuche. 
+# Um beispielsweise den Computer eine Zahl zwischen 1 und 100 ausdenken 
+# zu lassen, die der Benutzer in 5 Versuchen zu erraten hat, 
+# ist die Funktion start() mit den Argumenten 1, 100, 5 aufzurufen. 
+# start(1, 100, 5) bedeutet also:
+# Der Computer denkt sich eine Zahl zwischen 1 und 100 aus, 
+# der Spieler hat 5 Versuche, die Zahl zu erraten. 
 
+start(1, 100, 5)
