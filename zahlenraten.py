@@ -26,15 +26,15 @@
 
 # Zufallsfunktion importieren
 from random import randint
-
+from os import *
 # Konfiguration
-minZahl = 1 
+minZahl = 10
 # Der Minimalwert für das Zahlenratespiel kann hier geändert werden
 
 maxZahl = 100
 # Die Maximalwert für das Zahlenratespiel kann hier geändert werden
 
-versuche = 5
+versuche = 20
 # Die Anzahl der Rateversuche kann hier konfiguriert werden.
 
 ausgedachteZahl = randint(minZahl, maxZahl)
@@ -64,5 +64,6 @@ def raten():
       # Spiel gewonnen
       print("RICHTIG!")
       print("Sie haben {} Versuche benötigt." . format(count+1))
+      exit()
 
 raten()
