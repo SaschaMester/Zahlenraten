@@ -49,7 +49,10 @@ def raten():
   for count in range(0, versuche):
     zahl = int(input("Bitte geben Sie nun Ihren {}. Rateversuch ein: " . format(count+1))) 
     if zahl != ausgedachteZahl and count != versuche - 1:
-      print("Sie haben noch {} Versuche" . format(versuche - count - 1))
+      if versuche - count - 1 != 1:
+        print("Sie haben noch {} Versuche." . format(versuche - count - 1))
+      else:
+        print("Sie haben noch 1 Versuch.")
     if zahl != ausgedachteZahl and count == versuche - 1:
       print("Sie haben es in {} Versuchen nicht geschafft, die Zahl {} zu erraten." . format(versuche, ausgedachteZahl))
       exit()
