@@ -3,7 +3,7 @@ Dieses Zahlenratespiel ist lauffähig ab Python 2.7 und wurde am
 
 Der Quellcode steht unter der GNU General Public License, Version 3. 
 
-Aufruf mit python zahlenraten.py 
+Aufruf mit python start.py
 
 
 Näheres zum Spiel in den Code-Kommentaren. 
