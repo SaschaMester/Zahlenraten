@@ -61,6 +61,7 @@ def __raten(ausgedachteZahl, minZahl, maxZahl, versuche):
       start(minZahl, maxZahl * (count + 1), versuche * 2 - count - 1)
 
 def __ende():
+  print ("Das Programm wird beendet!")
   print ("Auf Wiedersehen!")
   exit()
 
