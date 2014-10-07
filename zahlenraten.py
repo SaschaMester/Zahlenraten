@@ -49,17 +49,14 @@ def raten():
   for count in range(0, versuche):
     zahl = int(input("Bitte geben Sie nun Ihren {}. Rateversuch ein: " . format(count+1))) 
     # Da der Computer bei 0 zu zählen beginnt, wäre der 1. Rateversuch der "0. Versuch" - also addieren wir 1 
+    if zahl <> ausgedachteZahl and count == versuche - 1:
+      print("Sie haben es in {} Versuchen nicht geschafft, die Zahl {} zu erraten." . format(versuche, ausgedachteZahl))
+      exit()
     if zahl < ausgedachteZahl:
       # Eingegebene Zahl mit der zu ratenden Zahl vergleichen
       print ("Meine Zahl ist größer als {}" . format(zahl))
-      if count == versuche - 1: 
-        # Aus dem gleichen Grund, warum oben 1 addiert wurde, subtrahieren wir hier wieder um 1
-        print("Sie haben es in {} Versuchen nicht geschafft, die Zahl {} zu erraten und haben verloren" . format(versuche, ausgedachteZahl))
-        # Game Over und Lösung verraten
     elif zahl > ausgedachteZahl:
       print("Meine Zahl ist kleiner als {}" . format(zahl))
-      if count == versuche - 1: 
-        print("Sie haben es in {} Versuchen nicht geschafft, die Zahl {} zu erraten und haben verloren" . format(versuche, ausgedachteZahl))
     else:
       # Spiel gewonnen
       print("RICHTIG!")
