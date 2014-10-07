@@ -33,9 +33,9 @@ def start(minZahl, maxZahl, versuche):
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
   print("Durch Eingabe von 0 beenden Sie das Programm")
-  raten(ausgedachteZahl, versuche)
+  __raten(ausgedachteZahl, versuche)
 
-def raten(ausgedachteZahl, versuche): 
+def __raten(ausgedachteZahl, versuche): 
   # Die Funktion raten() stellt die eigentliche Funktionalität des Programmes zur Verfügung
   for count in range(0, versuche):
     zahl = int(input("Bitte geben Sie nun Ihren {}. Rateversuch ein: " . format(count+1))) 
