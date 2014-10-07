@@ -58,7 +58,7 @@ def __raten(ausgedachteZahl, minZahl, maxZahl, versuche):
       # Spiel gewonnen
       print("RICHTIG!")
       print("Sie haben {} Versuche benötigt." . format(count+1))
-      start(minZahl, maxZahl * (count + 1), versuche * 2)
+      start(minZahl, maxZahl * (count + 1), versuche + count + 1)
 
 def __ende():
   print ("Auf Wiedersehen!")
