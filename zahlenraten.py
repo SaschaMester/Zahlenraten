@@ -40,9 +40,10 @@ versuche = 5
 ausgedachteZahl = randint(minZahl, maxZahl)
 # Zahl ausdenken
 
-
-print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
-print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
+def start():
+  print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
+  print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
+  raten()
 
 def raten(): 
   # Die Funktion raten() stellt die eigentliche Funktionalität des Programmes zur Verfügung
@@ -66,5 +67,3 @@ def raten():
       print("RICHTIG!")
       print("Sie haben {} Versuche benötigt." . format(count+1))
       exit()
-
-raten()
