@@ -41,7 +41,7 @@ ausgedachteZahl = randint(minZahl, maxZahl)
 # Zahl ausdenken
 
 
-print("Ich habe mir eine Zahl zwischen {}  und {} ausgedacht." . format(minZahl, maxZahl))
+print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
 print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
 
 def raten(): 
