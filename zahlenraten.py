@@ -46,6 +46,7 @@ def __raten(ausgedachteZahl, minZahl, maxZahl, versuche):
     if zahl == 0:
       __ende()
     if zahl != ausgedachteZahl and count != versuche - 1:
+      print("Falsch!")
       if versuche - count - 1 != 1:
         print("Sie haben noch {} Versuche." . format(versuche - count - 1))
       else:
