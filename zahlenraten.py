@@ -30,12 +30,13 @@ from random import randint
 
 def start(minZahl, maxZahl, versuche):
   ausgedachteZahl = randint(minZahl, maxZahl)
+  if ausgedachteZahl > 65536:
+    maxZahl = 65536
+    start(minZahl, maxZahl, versuche)
   if ausgedachteZahl > 500 and ausgedachteZahl < 1000 and versuche < 20:
     versuche = versuche * 2
   elif ausgedachteZahl > 2500 and versuche < 30:
     versuche = versuche * 3
-  if ausgedachteZahl > 65536:
-    ausgedachteZahl = randint(1, 65536)
   if versuche > 15000:
     versuche = 15000
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht. Sie haben {} Versuche, meine Zahl zu erraten." . format(minZahl, maxZahl, versuche))
@@ -67,7 +68,7 @@ def __raten(ausgedachteZahl, minZahl, maxZahl, versuche):
       # Spiel gewonnen
       print("RICHTIG!")
       print("Sie haben {} Versuche benötigt." . format(count+1))
-      start(minZahl, maxZahl * (count + 1), versuche * 2 - count - 1)
+      start(minZahl, maxZahl * 2 - count - 1, versuche * 2 - count - 1)
 
 def __ende():
   print ("Das Programm wird beendet!")
