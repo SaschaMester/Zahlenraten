@@ -35,6 +35,8 @@ def start(minZahl, maxZahl, versuche):
     versuche = versuche * 2
   elif ausgedachteZahl > 2500 and versuche < 30:
     versuche = versuche * 3
+  if versuche > 15000:
+    versuche = 15000
   print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
   print("Durch Eingabe von 0 beenden Sie das Programm")
   __raten(ausgedachteZahl, minZahl, maxZahl, versuche)
