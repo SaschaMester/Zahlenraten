@@ -30,8 +30,7 @@ from os import system
 
 def start(minZahl, maxZahl, versuche):
   if versuche > 50:
-    print("Mehr als 50 Versuche sind nicht möglich.")
-    versuche = 50
+    versuche = randint(1, 50)
 
   if versuche > maxZahl - minZahl:
     print("Mehr Versuche zu haben, als mögliche Zahlen, ist unlogisch!")
@@ -64,6 +63,9 @@ def __raten(ausgedachteZahl, minZahl, maxZahl, versuche):
   for count in range(0, versuche):
     zahl = int(input("Bitte geben Sie nun Ihren {}. Rateversuch ein: " . format(count+1))) 
     if zahl == 0:
+      __ende()
+    if zahl < 0:
+      print("Negative Werte sind nicht möglich")
       __ende()
     if zahl != ausgedachteZahl and count != versuche - 1:
       print("Falsch!")
