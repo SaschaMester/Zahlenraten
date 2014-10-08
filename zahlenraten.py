@@ -29,6 +29,11 @@ from random import randint
 from os import system
 
 def start(minZahl, maxZahl, versuche):
+  if minZahl < 1:
+    print("Womöglich haben Sie eine Fehlkonfiguration im Starter.")
+    print("Negative Werte sind nicht zugelassen.") 
+    print("Programm startet mit 1, 100, 5)
+
   if versuche > 50:
     versuche = randint(1, 50)
 
