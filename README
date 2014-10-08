@@ -6,5 +6,24 @@ Der Quellcode steht unter der GNU General Public License, Version 3.
 Aufruf mit python start.py
 
 
-Näheres zum Spiel in den Code-Kommentaren. 
+Die Parameter für den Start des Spieles ( innerhalb welchen Bereiches 
+sucht der Computer sich eine Zahl aus, wieviele Versuche hat der User, 
+die Zahl zu erraten ) sind in der Datei start.py festzulegen. 
+Errät der Spieler die Zahl, geht es in eine nächste Runde - in welcher 
+sich die Werte automatisch ändern können. Die Parameter in der Datei 
+start.py sind also lediglich für den Start des Spieles relevant. 
 
+Eine Erweiterung des Spielkonzeptes wäre vielleicht, den Benutzer 
+die Anzahl der Versuche und den Zahlenbereich würfeln zu lassen. 
+
+Dies ist vorgesehen für eine weitere Version des Spieles - erst einmal 
+ging es mir aber lediglich darum, eine Codebase aufzubauen und 
+den Schwierigkeitsgrad zu steigern, nachdem die Zahl erraten wurde. 
+
+Für die Anhebung des Schwierigkeitsgrades sind die verbrauchten Versuche 
+von Relevanz ( die nicht benötigten Versuche werden in die nächste Runde 
+mitgenommen ). 
+
+Auch geplant ist eine englische Version des Spieles - dies wird allerdings 
+nichts vor der erstmaligen Veröffentlichung des Spiels in Verbindung mit 
+Würfeln. 
