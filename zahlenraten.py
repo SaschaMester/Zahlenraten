@@ -45,7 +45,10 @@ def start(minZahl, maxZahl, versuche):
     versuche = 50
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
-  print("Für Testzwecke: meine ausgedachte Zahl lautet: {}" . format(ausgedachteZahl))
+
+  # Die nachfolgende Zeile ist für Testzwecke bestimmt. Wer für Tests die Ausgabe der Lösung wünscht, entfernt einfach die Raute
+  # print("Für Testzwecke: meine ausgedachte Zahl lautet: {}" . format(ausgedachteZahl))
+
   print("Durch Eingabe von 0 beenden Sie das Programm")
   __raten(ausgedachteZahl, minZahl, maxZahl, versuche)
 
