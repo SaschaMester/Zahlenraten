@@ -35,6 +35,8 @@ def start(minZahl, maxZahl, versuche):
     versuche = versuche * 2
   elif ausgedachteZahl > 2500 and versuche < 30:
     versuche = versuche * 3
+  if ausgedachteZahl > 65536:
+    ausgedachteZahl = randint(1, 65536)
   if versuche > 15000:
     versuche = 15000
   print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
