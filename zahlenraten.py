@@ -29,6 +29,10 @@ from random import randint
 
 
 def start(minZahl, maxZahl, versuche):
+  if versuche > maxZahl - minZahl:
+    print("Mehr Versuche zu haben, als mögliche Zahlen, ist unlogisch!")
+    __ende()
+
   ausgedachteZahl = randint(minZahl, maxZahl)
   if ausgedachteZahl > 65536:
     maxZahl = 65536
