@@ -37,5 +37,6 @@ from zahlenraten import *
 # Dies sind jedoch lediglich die Einstellungen für den START des Spieles. 
 # Errät der User die vom Computer ausgedachte Zahl, darf er in eine nächste
 # Runde - in welcher sich diese Werte verändern können.
+# Bitte die Versuche nicht über 50 setzen. 
 
 start(1, 100, 5)

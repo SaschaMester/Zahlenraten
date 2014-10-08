@@ -26,11 +26,18 @@
 
 # Zufallsfunktion importieren
 from random import randint
-
+from os import system
 
 def start(minZahl, maxZahl, versuche):
+  if versuche > 50:
+    print("Mehr als 50 Versuche sind nicht möglich.")
+    versuche = 50
+
   if versuche > maxZahl - minZahl:
     print("Mehr Versuche zu haben, als mögliche Zahlen, ist unlogisch!")
+    print("Womöglich ist ihre Startdatei falsch konfiguriert.")
+    print("Programm wird in 3 Sekunden gestartet mit 1, 100, 5")
+    system("sleep 3")
     start(1, 100, 5)
 
   ausgedachteZahl = randint(minZahl, maxZahl)
