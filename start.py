@@ -34,5 +34,8 @@ from zahlenraten import *
 # start(1, 100, 5) bedeutet also:
 # Der Computer denkt sich eine Zahl zwischen 1 und 100 aus, 
 # der Spieler hat 5 Versuche, die Zahl zu erraten. 
+# Dies sind jedoch lediglich die Einstellungen für den START des Spieles. 
+# Errät der User die vom Computer ausgedachte Zahl, darf er in eine nächste
+# Runde - in welcher sich diese Werte verändern können.
 
 start(1, 100, 5)
