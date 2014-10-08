@@ -34,17 +34,18 @@ def start(minZahl, maxZahl, versuche):
     start(1, 100, 5)
 
   ausgedachteZahl = randint(minZahl, maxZahl)
-  if ausgedachteZahl > 65536:
+  if maxZahl > 65536:
     maxZahl = 65536
     start(minZahl, maxZahl, versuche)
   if ausgedachteZahl > 500 and ausgedachteZahl < 1000 and versuche < 20:
     versuche = versuche * 2
   elif ausgedachteZahl > 2500 and versuche < 30:
     versuche = versuche * 3
-  if versuche > 15000:
-    versuche = 15000
+  if versuche > 50:
+    versuche = 50
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
+  print("Für Testzwecke: meine ausgedachte Zahl lautet: {}" . format(ausgedachteZahl))
   print("Durch Eingabe von 0 beenden Sie das Programm")
   __raten(ausgedachteZahl, minZahl, maxZahl, versuche)
 
