@@ -34,8 +34,8 @@ def start(minZahl, maxZahl, versuche):
     start(1, 100, 5)
 
   ausgedachteZahl = randint(minZahl, maxZahl)
-  if maxZahl > 65536:
-    maxZahl = 65536
+  if maxZahl > 5000:
+    maxZahl = 5000
     start(minZahl, maxZahl, versuche)
   if ausgedachteZahl > 500 and ausgedachteZahl < 1000 and versuche < 20:
     versuche = versuche * 2
