@@ -40,6 +40,8 @@ def start(minZahl, maxZahl, versuche):
     start(1, 100, 5)
 
   ausgedachteZahl = randint(minZahl, maxZahl)
+  if ausgedachteZahl < 1:
+    start(1, 100, 5)
   if maxZahl > 5000:
     maxZahl = 5000
     start(minZahl, maxZahl, versuche)
