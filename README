@@ -7,3 +7,24 @@ Aufruf mit python3 start.py
 
 Für einen reibungslosen Ablauf wird Python3 empfohlen. 
  
+Bei einem Zahlenratespiel geht es darum, dass der Computer sich innerhalb eines vorgegebenen Zahlenbereiches
+eine Zahl aussucht, die der Nutzer zu erraten hat. Vorgängerversionen dieses Programms hatten die Möglichkeit,
+die Anzahl der möglichen Rateversuche zu begrenzen - die Implementierung hingegen hat zu unübersichtlichem 
+Quellcode und zu Fehlern geführt. Daher ist eine Versuchsbegrenzung vorübergehend nicht mehr möglich. 
+
+Die start.py fragt Sie nach den Parametern Minimalwert und Maximalwert. Innerhalb diesen Bereichs sucht sich
+das Hauptprogramm eine Zufallszahl aus. Negative Werte sind nicht möglich, da sie per Multiplikation mit -1
+in positive Werte gewandelt werden. Das heißt, wenn Sie versuchen, eine Spielrunde zu spielen, in der Sie 
+eine Zahl zwischen -5 und 5 raten möchten, raten Sie letztendlich zwischen 5 und 5. 
+
+Es sind sowohl für die Bereichseinstellung der Zahlen als auch für Rateversuche nur positive Werte zulässig.
+Negative Werte werden automatisch in positive Werte umgewandelt. 
+In der Raterunde können Sie mit jeder Zahl, die kleiner ist, als der Minimalwert, das Programm beenden. 
+Aus diesen Gründen ist die 0 weder als Minimal- noch als Maximalwert zulässig. Dass die 0 auch als Maximalwert
+nicht zulässig ist, hat den Grund, dass Maximalwert und Minimalwert automatisch ihre Rollentauschen, sollte 
+der eingegebene Maximalwert kleiner sein.
+
+Aufgerufen wird das Spiel mit start.py - mit python3 zahlenraten.py wird sich nichts tun, da es sich bei
+zahlenraten.py um ein Modul handelt. 
+
+Nun aber viel Spaß mit diesem kleinen Zeitvertreib ;) 
