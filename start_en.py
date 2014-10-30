@@ -40,4 +40,3 @@ while not numbersEntered:
   numbersEntered = True
 
 start(minNumber, maxNumber)
-
