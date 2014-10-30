@@ -3,3 +3,5 @@
 *.pyc
 *.py~
 html/*
+LICENSE
+__pycache__/*
