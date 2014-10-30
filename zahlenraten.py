@@ -30,13 +30,20 @@ from random import randint
 
 
 def start(minZahl, maxZahl):
+  # Invert negative values
+  minZahl = abs(minZahl)
+  maxZahl = abs(maxZahl)
+
+  #Choose a random number out of the given pool
   ausgedachteZahl = randint(minZahl, maxZahl)
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   print("Ihre Aufgabe ist es, meine Zahl zu erraten.")
   print("Mit einer Zahl, die kleiner ist als {}, beenden Sie das Programm." . format(minZahl))
   main(minZahl, maxZahl, ausgedachteZahl)
 
+
 def main(minZahl, maxZahl, ausgedachteZahl):
+  # main Procedure
   geraten = False
   while not geraten:
     userzahl = input("Bitte geben Sie Ihren Rateversuch ein: ")
