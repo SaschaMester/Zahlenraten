@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: utf-8
 
 ########################################
@@ -28,74 +28,38 @@
 from random import randint
 from os import system
 
-def start(minZahl, maxZahl, versuche):
-  if minZahl < 1:
-    print("Womöglich haben Sie eine Fehlkonfiguration im Starter.")
-    print("Negative Werte sind nicht zugelassen.") 
-    print("Programm startet mit 1, 100, 5")
-    start(1, 100, 5)
-  if versuche > 50:
-    versuche = randint(1, 50)
-
-  if versuche > maxZahl - minZahl:
-    print("Mehr Versuche zu haben, als mögliche Zahlen, ist unlogisch!")
-    print("Womöglich ist ihre Startdatei falsch konfiguriert.")
-    print("Programm wird in 3 Sekunden gestartet mit 1, 100, 5")
-    system("sleep 3")
-    start(1, 100, 5)
-
+def start(minZahl, maxZahl):
+  try:
+    minZahl = int(minZahl)
+    maxZahl = int(maxZahl)
+  except ValueError:
+    print("Es liegt ein Fehler in der start.py vor. Als minimale und maximale")
+    print("Zahl sind nur Ganzzahlen erlaubt.")
   ausgedachteZahl = randint(minZahl, maxZahl)
-  if ausgedachteZahl < 1:
-    start(1, 100, 5)
-  if maxZahl > 5000:
-    maxZahl = 5000
-    start(minZahl, maxZahl, versuche)
-  if ausgedachteZahl > 500 and ausgedachteZahl < 1000 and versuche < 20:
-    versuche = versuche * 2
-  elif ausgedachteZahl > 2500 and versuche < 30:
-    versuche = versuche * 3
-  if versuche > 50:
-    versuche = 50
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
-  print("Sie haben {} Versuche, meine Zahl zu erraten." . format(versuche))
+  print("Ihre Aufgabe ist es, meine Zahl zu erraten.")
+  print("Mit einer Zahl, die kleiner ist als {}, beenden Sie das Programm." . format(minZahl))
+  main(minZahl, ausgedachteZahl)
 
-  # Die nachfolgende Zeile ist für Testzwecke bestimmt. Wer für Tests die Ausgabe der Lösung wünscht, entfernt einfach die Raute
-  # print("Für Testzwecke: meine ausgedachte Zahl lautet: {}" . format(ausgedachteZahl))
+def main(minZahl, ausgedachteZahl):
+  geraten = False
+  while not geraten:
+    userzahl = input("Bitte geben Sie Ihren Rateversuch ein.")
+    
+    try:
+      userzahl = int(userzahl)
+    except ValueError:
+      print("Bitte nur Ganzzahlen eingeben!")
+      continue
+    if userzahl < minZahl:
+      print("Auf Wiedersehen!")
+      quit()
 
-  print("Durch Eingabe von 0 beenden Sie das Programm")
-  __raten(ausgedachteZahl, minZahl, maxZahl, versuche)
-
-def __raten(ausgedachteZahl, minZahl, maxZahl, versuche): 
-  # Die Funktion raten() stellt die eigentliche Funktionalität des Programmes zur Verfügung
-  for count in range(0, versuche):
-    zahl = int(input("Bitte geben Sie nun Ihren {}. Rateversuch ein: " . format(count+1))) 
-    if zahl == 0:
-      __ende()
-    if zahl < 0:
-      print("Negative Werte sind nicht möglich")
-      __ende()
-    if zahl != ausgedachteZahl and count != versuche - 1:
-      print("Falsch!")
-      if versuche - count - 1 != 1:
-        print("Sie haben noch {} Versuche." . format(versuche - count - 1))
-      else:
-        print("Sie haben noch 1 Versuch.")
-    if zahl != ausgedachteZahl and count == versuche - 1:
-      print("Sie haben es in {} Versuchen nicht geschafft, die Zahl {} zu erraten." . format(versuche, ausgedachteZahl))
-      __ende()
-    if zahl < ausgedachteZahl:
-      # Eingegebene Zahl mit der zu ratenden Zahl vergleichen
-      print ("Meine Zahl ist größer als {}" . format(zahl))
-    elif zahl > ausgedachteZahl:
-      print("Meine Zahl ist kleiner als {}" . format(zahl))
+    if userzahl > ausgedachteZahl:
+      print("Meine Zahl ist kleiner als {}". format(userzahl))
+    elif userzahl < ausgedachteZahl:
+      print("Meine Zahl ist größer als {}" . format(userzahl))
     else:
-      # Spiel gewonnen
-      print("RICHTIG!")
-      print("Sie haben {} Versuche benötigt." . format(count+1))
-      start(minZahl, maxZahl * 2 - count - 1, versuche * 2 - count - 1)
-
-def __ende():
-  print ("Das Programm wird beendet!")
-  print ("Auf Wiedersehen!")
-  exit()
+      geraten = True
+  print("Herzlichen Glückwunsch!")
 
