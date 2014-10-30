@@ -34,7 +34,7 @@ print("Sich eine Zahl ausdenken soll.")
 while not zahlenEingegeben:
   try:
     minZahl = int(input("Bitte geben Sie die Mindestzahl ein: "))
-    if minZahl < 1:
+    if minZahl == 0:
       print("Negative Werteingaben werden im Hauptprogramm per Multiplikation mit -1")
       print("in positive Werte umgewandelt.") 
       print("Da Sie in der Raterunde mit jedem Rateversuch, der kleiner ist, als der Mindestwert,")
