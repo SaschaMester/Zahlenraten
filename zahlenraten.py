@@ -50,6 +50,7 @@ def main(minZahl, maxZahl, ausgedachteZahl):
     
     try:
       userzahl = int(userzahl)
+      userzahl = abs(userzahl)
     except ValueError:
       print("Bitte nur Ganzzahlen eingeben!")
       continue
