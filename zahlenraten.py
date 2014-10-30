@@ -30,12 +30,6 @@ from random import randint
 
 
 def start(minZahl, maxZahl):
-  try:
-    minZahl = int(minZahl)
-    maxZahl = int(maxZahl)
-  except ValueError:
-    print("Es liegt ein Fehler in der start.py vor. Als minimale und maximale")
-    print("Zahl sind nur Ganzzahlen erlaubt.")
   ausgedachteZahl = randint(minZahl, maxZahl)
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   print("Ihre Aufgabe ist es, meine Zahl zu erraten.")
