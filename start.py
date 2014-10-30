@@ -34,6 +34,15 @@ print("Sich eine Zahl ausdenken soll.")
 while not zahlenEingegeben:
   try:
     minZahl = int(input("Bitte geben Sie die Mindestzahl ein: "))
+    if minZahl < 1:
+      print("Negative Werteingaben werden im Hauptprogramm per Multiplikation mit -1")
+      print("in positive Werte umgewandelt.") 
+      print("Da Sie in der Raterunde mit jedem Rateversuch, der kleiner ist, als der Mindestwert,")
+      print("das Programm beenden können, und Sie nicht daran gehindert werden sollen, das Programm")
+      print("sauber zu beenden, ist die 0 als Mindestzahl nicht zulässig.")
+      print("Das Programm wird an dieser Stelle beendet.")
+      quit()
+
     maxZahl = int(input("Bitte geben Sie die Maximalzahl ein: "))
   except ValueError:
     print("Es sind nur Ganzzahlen erlaubt:")
