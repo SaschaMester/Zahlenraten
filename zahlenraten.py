@@ -61,6 +61,9 @@ def main(minZahl, maxZahl, ausgedachteZahl):
     except ValueError:
       print("Bitte nur Ganzzahlen eingeben!")
       continue
+    if userzahl > maxZahl:
+      print("Meine Zahl ist nicht größer als {}." . format(maxZahl))
+      continue
     if userzahl < minZahl:
       print("Auf Wiedersehen!")
       quit()
