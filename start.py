@@ -25,6 +25,16 @@
 
 from zahlenraten import *
 
+def throwNegError():
+  print("Negative Werteingaben werden im Hauptprogramm per Multiplikation mit -1")
+  print("in positive Werte umgewandelt. Wenn der Maximalwert kleiner ist als der Minimalwert,") 
+  print("so wird der Maximalwert gegen den Minimalwert ausgetauscht.") 
+  print("Da Sie in der Raterunde mit jedem Rateversuch, der kleiner ist, als der Mindestwert,")
+  print("das Programm beenden können, und Sie nicht daran gehindert werden sollen, das Programm")
+  print("sauber zu beenden, ist die 0 als Mindestzahl nicht zulässig.")
+  print("Das Programm wird an dieser Stelle beendet.")
+  quit()
+
 zahlenEingegeben = False
 
 print("Herzlich Willkommen im Zahlenratespiel") 
@@ -35,15 +45,10 @@ while not zahlenEingegeben:
   try:
     minZahl = int(input("Bitte geben Sie die Mindestzahl ein: "))
     if minZahl == 0:
-      print("Negative Werteingaben werden im Hauptprogramm per Multiplikation mit -1")
-      print("in positive Werte umgewandelt.") 
-      print("Da Sie in der Raterunde mit jedem Rateversuch, der kleiner ist, als der Mindestwert,")
-      print("das Programm beenden können, und Sie nicht daran gehindert werden sollen, das Programm")
-      print("sauber zu beenden, ist die 0 als Mindestzahl nicht zulässig.")
-      print("Das Programm wird an dieser Stelle beendet.")
-      quit()
-
+      throwNegError()
     maxZahl = int(input("Bitte geben Sie die Maximalzahl ein: "))
+    if maxZahl == 0:
+      throwNegError()
   except ValueError:
     print("Es sind nur Ganzzahlen erlaubt:")
     continue
