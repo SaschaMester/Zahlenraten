@@ -26,7 +26,8 @@
 
 # Zufallsfunktion importieren
 from random import randint
-from os import system
+
+
 
 def start(minZahl, maxZahl):
   try:
@@ -39,9 +40,9 @@ def start(minZahl, maxZahl):
   print("Ich habe mir eine Zahl zwischen {} und {} ausgedacht." . format(minZahl, maxZahl))
   print("Ihre Aufgabe ist es, meine Zahl zu erraten.")
   print("Mit einer Zahl, die kleiner ist als {}, beenden Sie das Programm." . format(minZahl))
-  main(minZahl, ausgedachteZahl)
+  main(minZahl, maxZahl, ausgedachteZahl)
 
-def main(minZahl, ausgedachteZahl):
+def main(minZahl, maxZahl, ausgedachteZahl):
   geraten = False
   while not geraten:
     userzahl = input("Bitte geben Sie Ihren Rateversuch ein: ")
@@ -61,5 +62,7 @@ def main(minZahl, ausgedachteZahl):
       print("Meine Zahl ist größer als {}" . format(userzahl))
     else:
       geraten = True
-  print("Herzlichen Glückwunsch!")
-
+      print("Herzlichen Glückwunsch!")
+      play_again = input("Nochmal spielen? (Mit den gleichen Einstellungen) (J/N) ")
+      if play_again == "j" or play_again == "J":
+        start(minZahl, maxZahl)
