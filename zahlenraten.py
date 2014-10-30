@@ -44,7 +44,7 @@ def start(minZahl, maxZahl):
 def main(minZahl, ausgedachteZahl):
   geraten = False
   while not geraten:
-    userzahl = input("Bitte geben Sie Ihren Rateversuch ein.")
+    userzahl = input("Bitte geben Sie Ihren Rateversuch ein: ")
     
     try:
       userzahl = int(userzahl)
