@@ -41,10 +41,7 @@ def start(minZahl, maxZahl):
 
   # Make sure that "minZahl" is less than "maxZahl"
   if maxZahl < minZahl:
-    minZahl1 = maxZahl
-    maxZahl1 = minZahl
-    maxZahl = maxZahl1
-    minZahl = minZahl1
+    minZahl, maxZahl = maxZahl, minZahl
 
   #Choose a random number out of the given pool
   ausgedachteZahl = randint(minZahl, maxZahl)
