@@ -1,4 +1,6 @@
 // Datei: random.cpp
+// Quelle: http://magazin.c-plusplus.de/artikel/Zuf%E4lle%20gibt%60sFragezeichenAusrufezeichen%20-%20Funktionen%20rund%20um%20rand,%20Random%20und%20den%20Zufall
+
 #ifndef _RANDOM_H
 #define _RANDOM_H
 
