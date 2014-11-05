@@ -13,7 +13,6 @@ int zahl_ausdenken(int minZahl, int maxZahl)
 void play(int gedachte_Zahl, int trial)
 {
    int i;
-   int count;
    int rateversuch;
    for ( i = 1; i < trial+1; i++)
    {
