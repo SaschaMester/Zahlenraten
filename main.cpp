@@ -48,4 +48,5 @@ int main()
    int rateversuch;
    int gedachte_Zahl = zahl_ausdenken(1, 120);
    raten(gedachte_Zahl);
+   return 0;
 }
