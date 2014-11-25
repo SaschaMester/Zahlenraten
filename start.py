@@ -46,7 +46,7 @@ while not zahlenEingegeben:
     minZahl = int(input("Bitte geben Sie die Mindestzahl ein: "))
     if minZahl == 0:
       throwNegError()
-    maxZahl = int(input("Bitte geben Sie die Maximalzahl ein: "))
+    maxZahl = int(input("Wie hoch darf die Maximalzahl HÖCHSTENS sein?: "))
     if maxZahl == 0:
       throwNegError()
   except ValueError:
