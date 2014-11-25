@@ -54,5 +54,4 @@ while not zahlenEingegeben:
     continue
   zahlenEingegeben = True
 
-start(minZahl, maxZahl)
-
+findeMaxZahl(minZahl, maxZahl)

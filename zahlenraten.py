@@ -27,6 +27,10 @@
 # Zufallsfunktion importieren
 from random import randint
 
+def findeMaxZahl(minZahl, maxZahl):
+  # zufällige maxZahl
+  maxZahl = randint(minZahl, maxZahl)
+  start(minZahl, maxZahl)
 
 
 def start(minZahl, maxZahl):
