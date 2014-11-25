@@ -38,10 +38,6 @@ def start(minZahl, maxZahl):
   minZahl = abs(minZahl)
   maxZahl = abs(maxZahl)
 
-  if abs(maxZahl - minZahl) < 5:
-    print("Um effektiv spielen zu können, sollte der Unterschied zwischen Mindestwert und Maximalwert")
-    print("durchaus größer sein als 5.")
-    quit()
 
   # Make sure that "minZahl" is less than "maxZahl"
   if maxZahl < minZahl:
