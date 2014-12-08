@@ -36,3 +36,7 @@ Ziel ist es, auch die C++ - Version so flexibel zu gestalten, wie die Python-Ver
 Für die C++ - Version werden beide *.cpp - Dateien benötigt. 
 Kompiliert wird mit : g++ -o [gewünschter_Name] main.cpp 
 
+Um Missverständnisse zu vermeiden ( Der C++ - Code wird NICHT zum 
+Ausführen des Python-Codes benötigt! ), hat die C++-Version nun ihren
+eigenen Unterordner.
+
