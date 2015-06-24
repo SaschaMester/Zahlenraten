@@ -50,7 +50,7 @@ while not zahlenEingegeben:
     if maxZahl == 0:
       throwNegError()
   except ValueError:
-    print("Es sind nur Ganzzahlen erlaubt:")
+    print("Es sind nur Ganzzahlen erlaubt!")
     continue
   zahlenEingegeben = True
 
