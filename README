@@ -28,15 +28,3 @@ Aufgerufen wird das Spiel mit start.py - mit python3 zahlenraten.py wird sich ni
 zahlenraten.py um ein Modul handelt. 
 
 Nun aber viel Spaß mit diesem kleinen Zeitvertreib ;) 
-
-Am 05.11.2014 ist dieses Spiel um eine C++ - Version bereichert worden. 
-Der Zahlenbereich ist in diesem Fall aber noch hardcoded und die Anzahl der Versuche auf 3 beschränkt. 
-Ziel ist es, auch die C++ - Version so flexibel zu gestalten, wie die Python-Version. 
-
-Für die C++ - Version werden beide *.cpp - Dateien benötigt. 
-Kompiliert wird mit : g++ -o [gewünschter_Name] main.cpp 
-
-Um Missverständnisse zu vermeiden ( Der C++ - Code wird NICHT zum 
-Ausführen des Python-Codes benötigt! ), hat die C++-Version nun ihren
-eigenen Unterordner.
-
