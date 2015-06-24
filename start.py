@@ -35,6 +35,10 @@ def throwNegError():
   print("Das Programm wird an dieser Stelle beendet.")
   quit()
 
+def bye():
+  print("Auf Wiedersehen!")
+  quit()
+
 zahlenEingegeben = False
 
 print("Herzlich Willkommen im Zahlenratespiel") 
@@ -43,12 +47,16 @@ print("Sie dürfen nun den Zahlenbereich eingeben, innerhalb welchem der Compute
 print("Sich eine Zahl ausdenken soll.")
 while not zahlenEingegeben:
   try:
-    minZahl = int(input("Bitte geben Sie die Mindestzahl ein: "))
+    minZahl = int(input("Bitte geben Sie die Mindestzahl ein: (0 zum Beenden): "))
     if minZahl == 0:
+      bye()
+    if minZahl < 0:
       throwNegError()
-    maxZahl = int(input("Wie hoch darf die Maximalzahl HÖCHSTENS sein?: "))
+    maxZahl = int(input("Wie hoch darf die Maximalzahl HÖCHSTENS sein? (0 zum Beenden): "))
+    if maxZahl < 0:
+      throwNegError()
     if maxZahl == 0:
-      throwNegError()
+      bye()
   except ValueError:
     print("Es sind nur Ganzzahlen erlaubt!")
     continue
