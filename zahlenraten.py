@@ -80,3 +80,7 @@ def main(minZahl, maxZahl, ausgedachteZahl):
       play_again = input("Nochmal spielen? (Mit den gleichen Einstellungen) (J/N) ")
       if play_again == "j" or play_again == "J":
         start(minZahl, maxZahl)
+      else:
+        print("Auf Wiedersehen!")
+        quit()
+
